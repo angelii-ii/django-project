@@ -1,0 +1,13 @@
+*{
+    background-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #6600a1;
+}
+body{
+    background-color: #cbaeff;
+}
+html{
+    font-family: sans-serif;
+}

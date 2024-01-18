@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="{% url 'contact-us' %}" method="get">
+        {% csrf_token %}
+        <input style="margin-bottom: 20px" type="text" name="Email" required>
+        </br>
+        <button type="submit">Enter</button>
+    </form>
+</body>
+</html>

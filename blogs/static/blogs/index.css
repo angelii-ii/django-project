@@ -1,0 +1,121 @@
+#main-nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 5px 25px;
+    background: linear-gradient(to left bottom, #e3bcff, #9cb3ff);
+}
+#main-nav a{
+    text-decoration: none;
+    font-weight: bold;
+}
+#main-nav a:hover{
+    color: darkcyan;
+    transition: 200ms;
+}
+#main-nav a:active{
+    color: aquamarine;
+}
+#main-nav h1 a:hover,
+#main-nav h1 a:active{
+    color: fuchsia;
+}
+#welcome header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+        background:linear-gradient(to right top,cornflowerblue,rebeccapurple);
+
+}
+#welcome img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border: 3px dotted whitesmoke;
+    background-color: #ffe1bf;
+    transform: rotateZ(-5deg);
+    box-shadow: 0 0 5px darkgrey;
+}
+#welcome h2{
+    font-size: 3.5rem;
+    margin: 0 0 0 2rem;
+    color: violet;
+    width: 10rem;
+}
+#welcome p{
+    color: darkblue;
+    font-size: 1.5rem;
+    text-align: center;
+}
+#latest-posts{
+    background-color: pink;
+    padding: 2rem;
+    border-radius: 12px;
+    border: dashed 4px antiquewhite;
+    width: 60rem;
+    margin: 10px auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3 );
+}
+#latest-posts h2{
+    text-align: center;
+}
+#latest-posts ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#latest-posts li{
+    flex: 1;
+}
+
+#about{
+    width: 100%;
+    text-align: center;
+    padding: 3rem;
+    background-color: #ffb5f0;
+    margin-top: 5rem;
+}
+#about h2{
+    font-size: 3rem;
+    color: #c13f79;
+}
+#about p{
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+.post-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.post a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: all ease .2s;
+    padding: 1rem;
+}
+.post a:active,
+.post a:hover{
+    transform: scale(1.1);
+    padding: 2% 7%;
+    background-color: #390281;
+    color: whitesmoke;
+}
+.post img{
+    width: 200px;
+    border-radius: 15px;
+}

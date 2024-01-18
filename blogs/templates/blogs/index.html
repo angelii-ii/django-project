@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    index
+{% endblock %}
+
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'blogs/index.css' %}">
+{% endblock %}
+
+{% block body %}
+{# <h1>This is the start of the website</h1>#}
+{#    <p>{{ a }}</p>#}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blogs/images/cat-1-svgrepo-com.svg' %}" alt="programs">
+            <h2>Website</h2>
+        </header>
+        <p>Hello this is a paragraph</p>
+    </section>
+    <section id="latest-posts">
+        <h2>Latest posts</h2>
+{#        <ul>#}
+{#            <li><a href="#"></a></li>#}
+{#            <li><a href="#">test2</a></li>#}
+{#            <li><a href="#">test3</a></li>#}
+{#        </ul>#}
+    <ul>
+        {% for post in latest_posts %}
+        <li>
+            {% include 'blogs/includes/header.html' %}
+        </li>
+        {% endfor %}
+    </ul>
+    </section>
+    <section id="about">
+        <h2>Explanation about the site</h2>
+        <p>This is the very first try of working with Django</p>
+        <p>This is more explanations about the author of this site</p>
+    </section>
+
+{% endblock %}

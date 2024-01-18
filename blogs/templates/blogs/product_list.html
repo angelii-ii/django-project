@@ -1,0 +1,34 @@
+{% load static %}
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'blogs/product_list.css' %}">
+{% endblock %}
+<body>
+    <h1>Product list</h1>
+    <h3>number of products: {{ numbers }}</h3>
+    <div style="display: flex; flex-direction: row; ">
+    <h4 style="margin: 0 20px">Average price: {{ info.price__avg }}</h4>
+    <h4 style="margin: 0 20px">Max Price: {{ info.price__max }}</h4>
+    <h4 style="margin: 0 20px">Min Price: {{ info.price__min }}</h4>
+    </div>
+    <div style="line-height: 30px">
+    <table>
+        <tr>
+            <th><b>title</b></th>
+            <th><b>price</b></th>
+            <th><b>In Stock</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            {% for product in all_products %}
+                <tr>
+                    <td><a href="{{ product.slug }}">{{ product.title }}</a></td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.popularity }}</td>
+                    <td>{{ product.description }}</td>
+                </tr>
+            {% endfor %}
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

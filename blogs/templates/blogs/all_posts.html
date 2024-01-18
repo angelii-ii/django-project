@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    All Posts
+{% endblock %}
+
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'blogs/index.css' %}">
+    <link rel="stylesheet" href="{% static 'blogs/all_posts.css' %}">
+{% endblock %}
+
+{% block body %}
+{#    <ul>#}
+{#        <li><a href="#">link1</a></li>#}
+{#        <li><a href="#">link2</a></li>#}
+{#        <li><a href="#">link3</a></li>#}
+{#    </ul>#}
+    <section id="all-posts">
+        <h2>All posts</h2>
+        <ul>
+        {% for post in all_posts %}
+            <li>
+            {% include 'blogs/includes/header.html' %}
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
